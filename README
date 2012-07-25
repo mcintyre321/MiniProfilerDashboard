@@ -1,0 +1,7 @@
+A drop in MiniProfiler dashboard for ASP.NET MVC 4, orinially based on Anton Vishnyak's mvc-mini-profiler-dashboard project (1).
+
+To use, install via nuget, and point the connection string at your MiniProfiler Sql log database. Then visit /performance to view stats
+
+
+
+1. http://code.google.com/p/mvc-mini-profiler-dashboard/
