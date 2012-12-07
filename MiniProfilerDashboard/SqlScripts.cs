@@ -74,6 +74,15 @@ namespace MiniProfilerDashboard
      DbType            varchar(50) null,
      Size              int null,
      Value             nvarchar(max) null -- sqlite: remove (max)
-  )";
+  )
+  IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'MiniProfilerClientTimings')
+ create table MiniProfilerClientTimings
+(
+  MiniProfilerId    uniqueidentifier not null,
+  Name nvarchar(200) not null,
+  Start decimal(7,1),
+  Duration decimal(7,1)    
+)
+";
     }
 }
